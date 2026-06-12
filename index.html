@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DeskRadar USB Update</title>
+    <script type="module"
+      src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+    </script>
+    <style>
+      :root { color-scheme: light dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #f5f5f7;
+        color: #1d1d1f;
+        font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      main { width: min(620px, calc(100% - 28px)); margin: 0 auto; padding: 48px 0; }
+      h1 { margin: 0 0 8px; font-size: 34px; }
+      .lead { color: #6e6e73; }
+      section { margin-top: 22px; padding: 22px; background: #fff; border-radius: 8px; }
+      esp-web-install-button { display: block; margin-top: 18px; }
+      .note { margin: 16px 0 0; color: #6e6e73; font-size: 13px; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #000; color: #f5f5f7; }
+        section { background: #1c1c1e; }
+        .lead, .note { color: #98989d; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>DeskRadar Update</h1>
+      <p class="lead">ESP anschließen, verbinden und die Firmware installieren.</p>
+      <section>
+        <strong>DeskRadar V1 für ESP32-S2 Mini</strong>
+        <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+        <p class="note">Nicht „gesamten Flash löschen“ auswählen. WLAN, Standort
+          und Personalisierung bleiben dadurch erhalten.</p>
+      </section>
+    </main>
+  </body>
+</html>
